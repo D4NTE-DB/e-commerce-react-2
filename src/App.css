@@ -1,0 +1,74 @@
+*{
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+box-icon{
+  fill: white;
+  position: relative;
+  top: 6px;
+}
+
+/* ---PRODUCT LIST INFO--- */
+
+.card{
+  margin-top: 200px;
+}
+
+.card > img{
+  padding: 30px;
+  width: 60%;
+  border-radius: 54px;
+}
+
+
+#icon , svg {
+  position: relative;
+  fill: white;
+  top: 6px;
+  fill: var(--bs-nav-link-color);
+}
+
+
+.card.bg-light{
+  position: relative;
+  width: 320px;
+  padding: 10px;
+  background: lightgoldenrodyellow;
+}
+
+.btn.btn-danger{
+  position: absolute;
+  width: 45px;
+  top: 361px;
+  left: 262px;
+  border-radius: 22px;
+  text-align: center;
+}
+
+.btn.btn-danger > box-icon{
+  position: relative;
+  right: 6px;
+  top: 2px;
+}
+
+.card-footer{
+  font-size: .7rem;
+}
+
+.carousel-inner > div > img{
+  width: 300px;
+  height: 250px;
+  border-radius: 16px;
+}
+
+.card-text{
+ font-size: .8rem
+}
+
+
+/* ---LOGIN CSS--- */
+
+#root > form {
+  width: 50%;
+}
