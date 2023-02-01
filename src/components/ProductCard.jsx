@@ -18,8 +18,8 @@ const ProductCard = () => {
         <div>    
             <h2>Products</h2>
             {products.map((prod) => (
-                <Row key={prod.id}xs={1} md={3} className="g-6" >
-                    {Array.from({ length: 4 }).map((_, idx) => (
+                <Row key={prod.id}xs={1} md={3} className="g-4" >
+                    {Array.from({ length: 1 }).map((_, idx) => (
                         <Col key={idx} onClick={() => navigate(`/product/${prod.id}`)}>
                             <Card bg='light' >
                                 <Carousel>

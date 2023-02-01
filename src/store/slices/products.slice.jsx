@@ -34,12 +34,6 @@ export const filterProductsHeadlineThunk = (productSearch) => (dispatch) => {
         .finally(() => dispatch(setIsLoading(false)));
 }
 
-// export const getProduct = (id) => (dispatch) => {
-//     dispatch(setIsLoading(true));
-//     return axios.get(`https://e-commerce-api-v2.academlo.tech/api/v1/products/${id}`)
-//         .then((res) => dispatch(setProducts(res.data)))
-//         .finally(() => dispatch(setIsLoading(false)));
-// }
 
 export const { setProducts } = productsSlice.actions;
 
