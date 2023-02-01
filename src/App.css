@@ -1,74 +1,87 @@
-*{
+* {
   margin: 0 auto;
   box-sizing: border-box;
 }
 
-box-icon{
+box-icon {
   fill: white;
   position: relative;
   top: 6px;
+  
 }
 
 /* ---PRODUCT LIST INFO--- */
 
-.card{
-  margin-top: 200px;
+.card {
+  margin-top: 50px;
 }
 
-.card > img{
+.card>img {
   padding: 30px;
   width: 60%;
   border-radius: 54px;
 }
 
+#icon{
+  
+}
 
-#icon , svg {
+#icon, svg {
+  /* position: relative; */
   position: relative;
-  fill: white;
-  top: 6px;
+  right: 2px;
+  width: 90%;
+  height: 90%;
   fill: var(--bs-nav-link-color);
 }
 
 
-.card.bg-light{
+.card.bg-light {
   position: relative;
   width: 320px;
   padding: 10px;
   background: lightgoldenrodyellow;
 }
 
-.btn.btn-danger{
+.btn.btn-danger {
   position: absolute;
-  width: 45px;
-  top: 361px;
-  left: 262px;
-  border-radius: 22px;
+  width: 0px;
+  height: 46px;
+  top: 216px;
+  left: 267px;
+  border-radius: 29px;
   text-align: center;
 }
 
-.btn.btn-danger > box-icon{
+.btn.btn-danger>box-icon {
   position: relative;
-  right: 6px;
-  top: 2px;
+  right: 11px;
+  top: -2px;
 }
 
-.card-footer{
+.card-footer {
   font-size: .7rem;
 }
 
-.carousel-inner > div > img{
+.carousel-inner>div>img {
   width: 300px;
   height: 250px;
   border-radius: 16px;
 }
 
-.card-text{
- font-size: .8rem
+.card-text {
+  font-size: .8rem
 }
 
 
 /* ---LOGIN CSS--- */
 
-#root > form {
+#root>form {
   width: 50%;
+}
+
+/* ---INPUT INFO--- */
+
+.mb-3.input-group {
+  margin: 10px;
 }

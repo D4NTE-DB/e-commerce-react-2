@@ -8,23 +8,22 @@ import ProductCard from './ProductCard';
 
 const Home = () => {
 
-    const userName = useSelector((state) => state.userName)
+  const userName = useSelector((state) => state.userName)
 
-    const dispatch = useDispatch()
+  const dispatch = useDispatch()
 
-    const [categories, setCateogories] = useState([])
+  const [categories, setCateogories] = useState([])
 
-    const [productSearch, setProductSearch] = useState('')
+  const [productSearch, setProductSearch] = useState('')
 
-    useEffect(() => {
-        axios.get('https://e-commerce-api-v2.academlo.tech/api/v1/categories')
-        .then((res) => setCateogories(res.data))
-    }, [])
+  useEffect(() => {
+    axios.get('https://e-commerce-api-v2.academlo.tech/api/v1/categories')
+      .then((res) => setCateogories(res.data))
+  }, [])
 
-    return (
-        <div>
-           <h2>Home</h2> 
-           <InputGroup className="mb-3">
+  return (
+    <div>
+      <InputGroup className="mb-3">
         <Form.Control
           placeholder="Recipient's username"
           aria-label="Recipient's username"
@@ -36,15 +35,16 @@ const Home = () => {
           Search
         </Button>
       </InputGroup>
-           {
-                categories.map((catg) => (
-                        <Button key={catg.id}value="" onClick={() => dispatch(filterProductsCategory(catg.id))}>{catg.name}</Button>
-                    
-                ))
-           }
-           {<ProductCard />}
-        </div>
-    );
+      <h2>Categories:</h2>
+      {
+        categories.map((catg) => (
+          <Button key={catg.id} value="" onClick={() => dispatch(filterProductsCategory(catg.id))}>{catg.name}</Button>
+
+        ))
+      }
+      {<ProductCard />}
+    </div>
+  );
 };
 
 export default Home;

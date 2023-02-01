@@ -16,13 +16,12 @@ const ProductCard = () => {
     
     return (
         <div>    
-            <h2>Products</h2>
-            {products.map((prod) => (
-                <Row key={prod.id}xs={1} md={3} className="g-4" >
-                    {Array.from({ length: 1 }).map((_, idx) => (
-                        <Col key={idx} onClick={() => navigate(`/product/${prod.id}`)}>
+            {/* <h2>Products</h2> */}
+                <Row xs={1} md={2} xl={4} className="g-4" >
+                    {products.map((prod) => (
+                        <Col key={prod.id} >
                             <Card bg='light' >
-                                <Carousel>
+                                <Carousel >
                                     <Carousel.Item className='ca-img' >
                                         <img
                                             className="d-block w-100"
@@ -46,8 +45,7 @@ const ProductCard = () => {
                                         />
                                     </Carousel.Item>
                                 </Carousel>
-                                {/* <Link/> */}
-                                <Card.Body >
+                                <Card.Body onClick={() => navigate(`/product/${prod.id}`)}>
                                     <Card.Title>{prod.title}</Card.Title>
                                     <Card.Text>
 
@@ -61,13 +59,12 @@ const ProductCard = () => {
                                     </Card.Footer>
                                 </Card.Body>
                                 <Button variant="danger" >
-                                <box-icon name='shopping-bag'></box-icon>
+                                <box-icon className='icon-shop' name='shopping-bag'></box-icon>
                                 </Button>
                             </Card>
                         </Col>
                     ))}
                 </Row>
-            ))}
         </div>
     );
 };

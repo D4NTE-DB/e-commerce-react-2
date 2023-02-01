@@ -13,6 +13,7 @@ import Purchases from './components/Purchases'
 import Login from './components/Login'
 import AppNavbar from './components/AppNavbar'
 import LoadingScreen from './components/LoadingScreen'
+import ProtectedRoutes from './components/ProtectedRoutes'
 
 
 function App() {
@@ -34,9 +35,10 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<Login />} />
-
-        <Route path='/product' element={<ProductCard />} />
+        <Route element={<ProtectedRoutes/>} >
         <Route path='/purchases' element={<Purchases />} />
+        </Route>
+        <Route path='/product' element={<ProductCard />} />
         <Route path='/product/:id' element={<ProductDetails/>}/>
 
       </Routes>
