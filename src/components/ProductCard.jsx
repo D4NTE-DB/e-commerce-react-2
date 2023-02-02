@@ -21,7 +21,7 @@ const ProductCard = () => {
                     {products.map((prod) => (
                         <Col key={prod.id} >
                             <Card bg='light' >
-                                <Carousel >
+                                <Carousel variant='dark' slide={false}>
                                     <Carousel.Item className='ca-img' >
                                         <img
                                             className="d-block w-100"

@@ -83,5 +83,10 @@ box-icon {
 /* ---INPUT INFO--- */
 
 .mb-3.input-group {
-  margin: 10px;
+  margin: 10px auto;
+  width: 80%;
+  text-align: center;
 }
+
+/* ----HOME----- */
+
