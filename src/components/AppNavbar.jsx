@@ -19,7 +19,6 @@ const AppNavbar = () => {
     useEffect(() => {
       dispatch(addItemToCartThunk());
     }, []);
-    console.log(cart)
 
 
     return (

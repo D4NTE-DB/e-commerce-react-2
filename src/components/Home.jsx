@@ -36,12 +36,14 @@ const Home = () => {
         </Button>
       </InputGroup>
       <h2>Categories:</h2>
+      <div style={{margin: '10px auto', textAlign: 'center'}}>
       {
         categories.map((catg) => (
-          <Button key={catg.id} value="" onClick={() => dispatch(filterProductsCategory(catg.id))}>{catg.name}</Button>
+          <Button  key={catg.id} value="" onClick={() => dispatch(filterProductsCategory(catg.id))}>{catg.name}</Button>
 
         ))
       }
+      </div>
       {<ProductCard />}
     </div>
   );

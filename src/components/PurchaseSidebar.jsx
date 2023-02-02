@@ -24,13 +24,13 @@ const PurchaseSidebar = ({show , handleClose}) => {
         {cart.map((car) => (
           <li className='cart-card' key={car.id}>
             <Link to={`/product/${car.product.id}`}>
-            <img style={{width: '100px'}} src={car.product.images[0]?.url} alt="" className="img-fluid" />
+            <img style={{width: '100px'}} src={car.product?.images?.[0]?.url} alt="" className="img-fluid" />
             </Link>
-            <div>
+            <div style={{width: '50%'}}>
             <h4>{car.product.title}</h4>
             <div className="quantity-cart">
             <button>+</button>
-            <div>{car.id}</div>
+            <div>{car.quantity}</div>
             <button>-</button>
             </div>
             
