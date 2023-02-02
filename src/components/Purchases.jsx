@@ -18,7 +18,7 @@ const Purchases = () => {
         <h1>Purchases</h1>
         <ul>
           {purchase?.map((favorite) => (
-            <li>
+            <li key={purchase.id}>
               
                 {/* <img src={favorite.news?.image} style={{ width: 200 }} alt="" /> */}
                 {/* <h4>{favorite.id}</h4 */}
