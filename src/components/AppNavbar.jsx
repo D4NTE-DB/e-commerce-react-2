@@ -32,7 +32,6 @@ const AppNavbar = () => {
                         <Nav className="me-auto">
 
                             <Nav.Link as={Link} to='/login'  > <box-icon name='user'></box-icon></Nav.Link>
-                            <Nav.Link as={Link} to='/product' >Products</Nav.Link>
                             <Nav.Link onClick={handleOpen}>
                                 <box-icon className='icon-shop' name='shopping-bag'></box-icon>
                                 <div className='counter-shop' style={{position: 'relative'}}>{cart.length}</div>

@@ -40,7 +40,6 @@ function App() {
         <Route element={<ProtectedRoutes/>} >
         <Route path='/purchases' element={<Purchases />} />
         </Route>
-        <Route path='/product' element={<ProductCard />} />
         <Route path='/product/:id' element={<ProductDetails/>}/>
         {/* <Route path='/sidebar' element={<PurchaseSidebar />}/> */}
         {/* <Route element={<PurchaseSidebar show={show} handleClose={handleClose} /> */}
