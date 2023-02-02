@@ -5,9 +5,52 @@
 
 box-icon {
   fill: white;
+  z-index: 100;
+}
+
+/* -----CART---- */
+
+.cart-card{
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+
+}
+
+.quantity-cart{
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+}
+
+.quantity-detail{
+  display: flex;
+  flex-direction: row;
+  width: 25%;
+}
+
+.cart-card > div > h4{
+  font-size: .9rem;
+}
+
+/* ----HEADER-----*/
+
+.navbar-brand {
+  margin-right: 2rem;
+  margin: auto;
+}
+
+.counter-shop{
   position: relative;
-  top: 6px;
-  
+  top: -17px;
+  right: -7px;
+  border-radius: 15px;
+  color: #000;
+  background: white;
+  text-align: center;
+  font-size: 10px;
+  width: 15px;
+  height: 15px;
 }
 
 /* ---PRODUCT LIST INFO--- */
@@ -47,7 +90,7 @@ box-icon {
   position: absolute;
   width: 0px;
   height: 46px;
-  top: 216px;
+  top: 275px;
   left: 267px;
   border-radius: 29px;
   text-align: center;

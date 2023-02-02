@@ -14,6 +14,7 @@ import Login from './components/Login'
 import AppNavbar from './components/AppNavbar'
 import LoadingScreen from './components/LoadingScreen'
 import ProtectedRoutes from './components/ProtectedRoutes'
+import PurchaseSidebar from './components/PurchaseSidebar'
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
   return (
     <HashRouter>
         <AppNavbar />
+        
         {isLoading && <LoadingScreen/>}
       <Routes>
         <Route path='/' element={<Home />} />
@@ -40,7 +42,8 @@ function App() {
         </Route>
         <Route path='/product' element={<ProductCard />} />
         <Route path='/product/:id' element={<ProductDetails/>}/>
-
+        {/* <Route path='/sidebar' element={<PurchaseSidebar />}/> */}
+        {/* <Route element={<PurchaseSidebar show={show} handleClose={handleClose} /> */}
       </Routes>
     </HashRouter>
   )

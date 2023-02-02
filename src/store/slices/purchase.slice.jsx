@@ -14,10 +14,17 @@ export const purchaseSlice = createSlice({
     }
 })
 
-export const getPurchases = () => (dispatch) => {
+export const getPurchasesThunk = () => (dispatch) => {
     dispatch(setIsLoading(true));
     return axios.get(`https://e-commerce-api-v2.academlo.tech/api/v1/purchases`, getConfig())
         .then((res) => dispatch(setPurchase(res.data)))
+        .finally(() => dispatch(setIsLoading(false)));
+}
+
+export const purchaseCartThunk = () => (dispatch) => {
+    dispatch(setIsLoading(true));
+    return axios.post('https://e-commerce-api-v2.academlo.tech/api/v1/purchases', {}, getConfig())
+        .then(() => dispatch(getPurchasesThunk))
         .finally(() => dispatch(setIsLoading(false)));
 }
 

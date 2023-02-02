@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { getPurchases } from '../store/slices/purchase.slice';
+import { getPurchasesThunk } from '../store/slices/purchase.slice';
 
 const Purchases = () => {
 
@@ -10,7 +10,7 @@ const Purchases = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(getPurchases())
+        dispatch(getPurchasesThunk())
     }, [])
     console.log(purchase)
     return (

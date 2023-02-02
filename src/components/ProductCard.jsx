@@ -1,18 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Row, Col, Card, Carousel, Button, InputGroup, Form } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 // import { Link } from 'react-router-dom';
 import '../App.css'
+import { addItemToCartThunk2 } from '../store/slices/cart.slice';
 import { filterProductsHeadlineThunk } from '../store/slices/products.slice';
 
 const ProductCard = () => {
 
     const products = useSelector((state) => state.products)
 
+    const [ide, setIde] = useState('')
+
     const navigate = useNavigate();
 
     const dispatch = useDispatch();
+
+    const addItemToCart = () => {
+        const toCart = {
+          quantity: 1,
+          productId: 1
+        }
+        console.log(toCart)
+        dispatch(addItemToCartThunk2(toCart))
+      }
     
     return (
         <div>    
@@ -21,7 +33,7 @@ const ProductCard = () => {
                     {products.map((prod) => (
                         <Col key={prod.id} >
                             <Card bg='light' >
-                                <Carousel variant='dark' slide={false}>
+                                <Carousel interval={null} variant='dark' slide={false}>
                                     <Carousel.Item className='ca-img' >
                                         <img
                                             className="d-block w-100"
@@ -58,7 +70,7 @@ const ProductCard = () => {
                                         <small className="text-muted">Updated At: {prod.updatedAt}</small>
                                     </Card.Footer>
                                 </Card.Body>
-                                <Button variant="danger" >
+                                <Button  variant="danger" onClick={() => navigate(`/product/${prod.id}`)}>
                                 <box-icon className='icon-shop' name='shopping-bag'></box-icon>
                                 </Button>
                             </Card>
