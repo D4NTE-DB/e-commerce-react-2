@@ -27,7 +27,7 @@ export const addItemToCartThunk2 = (item) => (dispatch) => {
     dispatch(setIsLoading(true));
     return axios.post('https://e-commerce-api-v2.academlo.tech/api/v1/cart' , item, getConfig())
         .then(() => dispatch(addItemToCartThunk()))
-        .catch((error) => alert(error))
+        .catch((error) => alert(`Para realizar tu compra primero inicia cesion ${error}`))
         .finally(() => dispatch(setIsLoading(false)));
 }
 
